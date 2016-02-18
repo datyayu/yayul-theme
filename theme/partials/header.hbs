@@ -1,0 +1,19 @@
+<div role='banner' class="Yayul_header">
+    {{#if @blog.logo}}
+        <a class="Yayul_header__logo" href="{{@blog.url}}">
+            <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+        </a>
+    {{/if}}
+
+    <h1 class="Yayul_header__title">
+        <a title="{{@blog.title}}" href='{{@blog.url}}'>
+            {{{@blog.title}}}
+        </a>
+    </h1>
+
+    <p class="Yayul_header__description">
+        <a title="{{@blog.title}}" href='{{@blog.url}}'>
+            {{@blog.description}}
+        </a>
+    </p>
+</div>
