@@ -1,0 +1,33 @@
+.Yayul_article {
+  margin-top: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid @light_text;
+
+  &__date {
+    color: @light_text;
+  }
+
+  &__title a {
+    color: @dark_text;
+
+    &:visited { color: @dark_text; }
+    &:active, &:hover { color: lighten(@dark_text, 20%); }
+  }
+
+  &__tags {
+    margin-top: .5em;
+    text-align: right;
+    color: @light_text;
+  }
+
+  &__tags a {
+    color: @light_text;
+
+    &:visited { color: @light_text; }
+    &:hover { text-decoration: underline;  }
+  }
+
+  &__content {
+    font-size: @post_fontsize;
+  }
+}
