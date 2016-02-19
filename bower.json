@@ -5,6 +5,7 @@
     "lesshat": "latest",
     "normalize-css": "latest",
     "modernizr": "latest",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.5.0",
+    "prism": "~1.4.1"
   }
 }

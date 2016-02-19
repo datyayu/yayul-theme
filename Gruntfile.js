@@ -26,12 +26,14 @@ module.exports = function(grunt) {
       combinejs: {
         files: {
           './theme/assets/js/vendor.min.js': [
-            'bower_components/modernizr/modernizr.js',
+            './bower_components/modernizr/modernizr.js',
+            './bower_components/prism/prism.js',
           ],
 
           /* THIS SHOULD BE DELETED BEFORE COMMITTING */
           '../datyayu.xyz/content/themes/yayul/assets/js/vendor.js':  [
-            'bower_components/modernizr/modernizr.js',
+            './bower_components/modernizr/modernizr.js',
+            './bower_components/prism/prism.js',
           ],
         }
       }
@@ -42,7 +44,7 @@ module.exports = function(grunt) {
       components: {
         files: {
           './build/compiled_styles.css': [
-            'bower_components/font-awesome/css/font-awesome.min.css',
+            './bower_components/font-awesome/css/font-awesome.min.css',
             './src/entry.less',
           ]
         }
@@ -51,7 +53,6 @@ module.exports = function(grunt) {
       options: {
         expand: true,
         paths: [
-          'bower_components/lesshat',
           './src',
         ]
       }
@@ -62,13 +63,15 @@ module.exports = function(grunt) {
       combine: {
         files: {
           './theme/assets/css/style.css': [
-            'bower_components/normalize-css/normalize.css',
+            './bower_components/normalize-css/normalize.css',
+            './bower_components/prism/themes/prism-okaidia.css',
             './build/compiled_styles.css',
           ],
 
           /* THIS SHOULD BE DELETED BEFORE COMMITTING */
           '../datyayu.xyz/content/themes/yayul/assets/css/style.css':  [
-            'bower_components/normalize-css/normalize.css',
+            './bower_components/normalize-css/normalize.css',
+            './bower_components/prism/themes/prism-okaidia.css',
             './build/compiled_styles.css',
           ],
         }
