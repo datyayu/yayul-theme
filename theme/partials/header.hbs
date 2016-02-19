@@ -1,4 +1,7 @@
-<div role='banner' class="Yayul_header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+<div role='banner' class="Yayul_header
+{{#if image}} style="background-image: url({{image}})
+{{else if @blog.cover}} style="background-image: url({{@blog.cover}})
+{{else}}no-cover{{/if}}">
     <div class="Yayul_header__content">
         {{#if @blog.logo}}
             <a class="Yayul_header__logo" href="{{@blog.url}}">
