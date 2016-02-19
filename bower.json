@@ -4,6 +4,7 @@
   "dependencies": {
     "lesshat": "latest",
     "normalize-css": "latest",
-    "modernizr": "latest"
+    "modernizr": "latest",
+    "font-awesome": "~4.5.0"
   }
 }

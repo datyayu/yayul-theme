@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     /* Watch packages */
     watch: {
       less: {
-        files: [ './src/*' ],
+        files: [ './src/**/*' ],
         tasks: ['less']
       },
 
@@ -42,6 +42,7 @@ module.exports = function(grunt) {
       components: {
         files: {
           './build/compiled_styles.css': [
+            'bower_components/font-awesome/css/font-awesome.min.css',
             './src/entry.less',
           ]
         }
