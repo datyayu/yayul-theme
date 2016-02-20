@@ -1,0 +1,58 @@
+{{!< default}}
+{{> "headers/author" }}
+
+<a id="content"></a>
+<main class="Yayul_main" role="main">
+    {{#author}}
+        <section class="Yayul_profile">
+            {{! Author's image/avatar }}
+            {{#if image}}
+                <a class="Yayul_profile__logo" href="{{url}}">
+                    <img src="{{image}}" alt="{{name}}" />
+                </a>
+            {{/if}}
+
+            {{! Author's name }}
+            <h1 class="Yayul_profile__title">{{name}}</h1>
+
+            {{! Author description }}
+            {{#if bio}}
+                <h3 class="Yayul_profile__bio">{{bio}}</h3>
+            {{/if}}
+
+                {{! Show author's meta info }}
+            <div class="Yayul_profile__meta">
+                {{! Show author's location }}
+                {{#if location}}
+                    <span class="Yayul_profile__location">
+                        <i class="fa fa-map-marker"></i> {{location}}
+                    </span>
+                {{/if}}
+
+                {{! Show author's website }}
+                {{#if website}}
+                    <span class="Yayul_profile__website">
+                        <i class="fa fa-link"></i> <a href="{{website}}">{{website}}</a>
+                    </span>
+                {{/if}}
+
+                {{! Show author's post count }}
+                <span class="Yayul_profile__stats">
+                    <i class="fa fa-pencil"></i>
+                    {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+                </span>
+            </div>
+        </section>
+    {{/author}}
+
+    {{! Render author's posts list }}
+    {{> post_list}}
+
+    {{! Enable pagination }}
+    {{#if pagination}}
+        <div class="Yayul_pagination"> {{{pagination}}} </div>
+    {{/if}}
+</main>
+
+
+{{> footer }}

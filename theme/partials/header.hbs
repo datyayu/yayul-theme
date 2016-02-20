@@ -1,24 +1,38 @@
 <div role='banner' class="Yayul_header
-{{#if image}} style="background-image: url({{image}})
-{{else if @blog.cover}} style="background-image: url({{@blog.cover}})
-{{else}}no-cover{{/if}}">
+{{#if post.image}}
+  " style="background-image: url({{post.image}})
+{{else}}{{#if author.cover}}
+  " style="background-image: url({{author.cover}})
+{{else}}{{#if @blog.cover}}
+  " style="background-image: url({{@blog.cover}})
+{{else}}
+  no-cover
+{{/if}}{{/if}}{{/if}}">
     <div class="Yayul_header__content">
         {{#if @blog.logo}}
-            <a class="Yayul_header__logo" href="{{@blog.url}}">
+            <figure class="Yayul_header__logo" href="{{@blog.url}}">
+              {{#if author.image}}
+                <img src="{{author.image}}" alt="{{author.name}}" />
+              {{else}}
                 <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
-            </a>
+              {{/if}}
+            </figure>
         {{/if}}
 
         <h1 class="Yayul_header__title">
-            <a title="{{@blog.title}}" href='{{@blog.url}}'>
-                {{{@blog.title}}}
-            </a>
+          {{#if author.name}}
+            <a title="{{author.name}}" href='{{author.url}}'> {{{author.name}}} </a>
+          {{else}}
+              <a title="{{@blog.title}}" href='{{@blog.url}}'> {{{@blog.title}}} </a>
+          {{/if}}
         </h1>
 
         <p class="Yayul_header__description">
-            <a title="{{@blog.title}}" href='{{@blog.url}}'>
-                {{@blog.description}}
-            </a>
+          {{#if author }}
+              <a title="{{author.website}}" href='{{author.website}}'> {{author.website}} </a>
+          {{ else }}
+              <a title="{{@blog.title}}" href='{{@blog.url}}'> {{@blog.description}} </a>
+          {{/if}}
         </p>
     </div>
 

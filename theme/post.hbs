@@ -23,13 +23,13 @@
 
 
             <footer class="Yayul_post__footer">
-                <div class="Yayul_author">
-                    {{#if author}}
-                        {{#if author.image}}
+                {{#author}}
+                    <div class="Yayul_author">
+                        {{#if image}}
                             <figure class="Yayul_author__imageContainer">
-                                <a class="Yayul_author__image" href="{{author.url}}" style="background-image: url({{author.image}})">
+                                <a class="Yayul_author__image" href="{{url}}" style="background-image: url({{image}})">
                                     <span class="Yayul_hidden">
-                                        {{author.name}}'s Picture
+                                        {{name}}'s Picture
                                     </span>
                                 </a>
                             </figure>
@@ -38,37 +38,37 @@
                         <address itemscope itemtype="http://schema.org/Person">
 
                             <h4 class="Yayul_author__name">
-                              <span itemprop="author">{{author.name}}</span>
+                              <a href="{{url}}" itemprop="author">{{name}}</span>
                             </h4>
 
 
-                            {{#if author.website}}
+                            {{#if website}}
                                 <div class="Yayul_author__website">
-                                  <a href="{{author.website}}" itemprop="url">{{author.website}}</a>
+                                  <a href="{{author.website}}" itemprop="url">{{website}}</a>
                                 </div>
                             {{/if}}
                         </address>
 
                         <div class="Yayul_author__bio">
-                            <p>{{author.bio}}</p>
+                            <p>{{bio}}</p>
                         </div>
 
-                        {{#if author.location}}
+                        {{#if location}}
                             <div class="Yayul_author__location">
                               <i class="fa fa-map-marker Yayul_author__icon"></i>
-                               <span>{{author.location}}</span>
+                               <span>{{location}}</span>
                             </div>
                         {{/if}}
                     </div>
-                {{/if}}
+                {{/author}}
 
                 <div class="Yayul_post__footer__share">
                     <h4 class="Yayul_post__footer__shareText">Share this post: &nbsp;</h4>
                     <div class="Yayul_post__footer__shareLinks">
-                        <a class="fa fa-twitter Yayul_post__footer__shareLink" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}">
+                        <a class="fa fa-twitter Yayul_post__footer__shareLink" target="_blank" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}">
                             <span class="Yayul_hidden">Twitter</span>
                         </a>
-                        <a class="fa fa-facebook-square Yayul_post__footer__shareLink" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}">
+                        <a class="fa fa-facebook-square Yayul_post__footer__shareLink" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}">
                             <span class="Yayul_hidden">Facebook</span>
                         </a>
                         <a class="fa fa-google-plus-square Yayul_post__footer__shareLink" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}">
@@ -95,7 +95,7 @@
 
 <script>
   var disqus_config = function () {
-    this.page.url = "{{@blog.url}}{{post.url}}"; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = "{{url absolute="true"}}"; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = "{{post.id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
   };
   (function() { // DON'T EDIT BELOW THIS LINE
