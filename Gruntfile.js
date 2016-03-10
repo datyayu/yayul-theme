@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       },
       combinejs: {
         files: {
-          './theme/assets/js/vendor.min.js': [
+          './theme/assets/js/vendor.js': [
             './bower_components/modernizr/modernizr.js',
             './bower_components/prism/prism.js',
           ],
