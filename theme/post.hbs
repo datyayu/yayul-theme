@@ -99,18 +99,27 @@
 
 {{> footer}}
 
+
+<!--
+To include comments in your posts, uncomment this block and replace
+both of 'YOUR_DISQUSS_ID' with your disqus id.
+
 <script>
+  // DON'T EDIT BELOW THIS LINE
   var disqus_config = function () {
-    this.page.url = "{{url absolute="true"}}"; // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = "{{post.id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = "{{url absolute="true"}}";
+    this.page.identifier = "{{post.id}}";
   };
-  (function() { // DON'T EDIT BELOW THIS LINE
+
+  (function(DISQUS_ID) {
+      if (!DISQUS_ID) return;
       var d = document, s = d.createElement('script');
 
-      s.src = '//datyayu.disqus.com/embed.js';
+      s.src = '//YOUR_DISQUS_ID.disqus.com/embed.js';
 
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
   })();
 </script>
-<script id="dsq-count-scr" src="//datyayu.disqus.com/count.js" async></script>
+<script id="dsq-count-scr" src="//YOUR_DISQUS_ID.disqus.com/count.js" async></script>
+-->
