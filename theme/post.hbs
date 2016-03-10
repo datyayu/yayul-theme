@@ -6,14 +6,20 @@
     {{#post}}
         <article class="Yayul_post" role="article" itemscope itemtype="http://schema.org/Article">
             <header class="Yayu_post__header">
-                <h1 class="Yayul_post__title" itemprop="headline">{{title}}</h1>
-
                 <time class="Yayul_post__date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
-                    {{date format='dddd DD MMM YYYY'}}
+                  {{date format='dddd DD MMM YYYY'}}
                 </time>
 
+                <h1 class="Yayul_post__title" itemprop="headline">{{title}}</h1>
+
+
                 {{#if tags}}
-                  <div class="Yayul_post__tags"> on {{tags separator=", "}} </div>
+                  <div class="Yayul_post__tags">
+                    {{#foreach tags }}
+                      <a href="{{url}}" title="{{name}}">#{{name}}</a>
+                      {{#unless @last}}, {{/unless}}
+                    {{/foreach}}
+                  </div>
                 {{/if}}
             </header>
 
