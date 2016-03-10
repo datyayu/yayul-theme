@@ -51,4 +51,28 @@
     margin: .2em;
     font-size: @header_fontsize * .5;
   }
+
+  &__navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 10vw;
+  }
+
+  &__links {
+    font-size: 1.5em;
+    list-style: none;
+    text-align: right;
+
+  }
+
+  &__item {
+    display: inline-block;
+    margin-left: 1em;
+  }
+  &__link:hover {
+    color: @light_text !important;
+  }
 }
