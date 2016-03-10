@@ -1,15 +1,17 @@
 .Yayul_profile {
   text-align: center;
-  padding-top: 4.5em;
+  padding-top: 2em;
+
 
   &__title a {
     color: @dark_text;
+    font-weight: normal;
 
     &:visited { color: @dark_text; }
   }
 
   &__meta {
-    padding-bottom: 1em;
+    padding-bottom: 5em;
     color: @light_text;
     border-bottom: 1px solid @separator_color;
   }
@@ -24,17 +26,16 @@
   &__logo {
     box-sizing: border-box;
     position: absolute;
-    top: -9em;
+    top: -5em;
     left: 50%;
-    margin-left: -100px;
-    width: 200px;
-    height: 200px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
     padding: 3px;
     background: #fff;
     border-radius: 100%;
     z-index: 2;
-    box-shadow: @separator_color 0 0 0 1px;
   }
 
   &__logo img {

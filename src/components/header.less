@@ -1,8 +1,9 @@
 .Yayul_header {
   .flex-center-container();
-  height: 100vh;
+  height: 15em;
+  padding: 1em 0;
   width: 100vw;
-  background-size: cover;
+  background-position: center;
   position: relative;
 
   &:after { /* Darken effect */
@@ -24,9 +25,10 @@
   }
 
   &__logo {
-    z-index: 1;
-    width: 150px;
-    height: 150px;
+    // display: none;
+    width: 100px;
+    height: 100px;
+    margin: 0;
   }
 
   &__logo img {
@@ -49,20 +51,4 @@
     margin: .2em;
     font-size: @header_fontsize * .5;
   }
-
-  &__arrow {
-    position: absolute;
-    z-index: 1;
-    font-size: 4em;
-    color: darken(@white_text, 20%);
-    top: 85vh;
-    left: 48vw;
-  }
-}
-
-
-.Yayul_header--author {
-  height: 20em;
-  background-position: center;
-  width: 100vw;
 }
