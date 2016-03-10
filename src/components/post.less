@@ -28,8 +28,12 @@
     padding: 2em 1em;
     justify-content: space-around;
     border: 1px solid @separator_color;
-
     position: relative;
+
+    @media @tablet {
+      padding-top: 3em;
+      flex-direction: column;
+    }
   }
 
   &__footer__shareText {

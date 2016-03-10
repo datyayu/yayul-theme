@@ -75,4 +75,22 @@
   &__link:hover {
     color: @light_text !important;
   }
+
+  &--author,
+  &--post {
+    @media @mobile {
+      .Yayul_header__logo,
+      .Yayul_header__title,
+      .Yayul_header__description {
+        display: none;
+      }
+    }
+  }
+
+  &--author {
+    @media @mobile { height: 5em; }
+  }
+  &--post {
+    @media @mobile { height: 2.5em; }
+  }
 }

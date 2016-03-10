@@ -1,6 +1,11 @@
 .Yayul_author {
   max-width: 60%;
 
+  @media @tablet {
+    max-width: 100%;
+    text-align: center;
+  }
+
   &__imageContainer {
     box-sizing: border-box;
     display: block;
@@ -16,6 +21,8 @@
     background: #fff;
     z-index: 2;
     box-shadow: @separator_color 0 0 0 1px;
+
+
   }
 
   &__image {
