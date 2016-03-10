@@ -3,16 +3,16 @@ An on-development theme for ghost.
 
 ## Current Features.
 
-* Responsive.
-* Code Highlighting (using [prismjs](https://github.com/PrismJS/prism))
-* Support for Comments (using [disqus](https://disqus.com/)).
-* Support for google analytics.
+* [x] Responsive.
+* [x] Code Highlighting (using [prismjs](https://github.com/PrismJS/prism))
+* [x] Support for Comments (using [disqus](https://disqus.com/)).
+* [x] Support for google analytics.
 
 ## Next Features.
-[ ] Off-canvas navigation.
-[ ] Fix-on-scroll header.
-[ ] Smooth scroll.
-[ ] Better responsive design.
+* [ ] Off-canvas navigation.
+* [ ] Fix-on-scroll header.
+* [ ] Smooth scroll.
+* [ ] Better responsive design.
 
 ## License
 The MIT License (MIT)
