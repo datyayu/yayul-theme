@@ -1,6 +1,15 @@
 # Yayul-theme
 An on-development theme for ghost.
 
+# Setup.
+
+If you just want to use the theme, just rename the 'theme' folder to 'yayul' and put it in your blog's themes folder.
+
+To include google analytics, just uncomment the script tag at the end of 'theme/index.hbs' and add your app's google analytics id.
+
+To include comments on your posts, uncomment the block at the end of 'theme/post.hbs' and replace both 'YOUR_DISCUS_ID' strings for your own disqus id.
+
+
 ## Current Features.
 
 * [x] Responsive.
@@ -8,11 +17,13 @@ An on-development theme for ghost.
 * [x] Support for Comments (using [disqus](https://disqus.com/)).
 * [x] Support for google analytics.
 
+
 ## Next Features.
 * [ ] Off-canvas navigation.
 * [ ] Fix-on-scroll header.
 * [ ] Smooth scroll.
 * [ ] Better responsive design.
+
 
 ## License
 The MIT License (MIT)

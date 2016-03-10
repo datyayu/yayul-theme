@@ -1,6 +1,4 @@
 build/
-theme/assets/css/*
-theme/assets/js/*
 bower_components/
 node_modules/
 *.log
