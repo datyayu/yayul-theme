@@ -10,7 +10,7 @@
 {{/if}}{{/if}}{{/if}}">
     <div class="Yayul_header__content">
         {{#if @blog.logo}}
-            <figure class="Yayul_header__logo" href="{{@blog.url}}">
+            <figure class="Yayul_header__logo" href="/">
               {{#if author.image}}
                 <img src="{{author.image}}" alt="{{author.name}}" />
               {{else}}
@@ -23,7 +23,7 @@
           {{#if author.name}}
             <a title="{{author.name}}" href='{{author.url}}'> {{{author.name}}} </a>
           {{else}}
-              <a title="{{@blog.title}}" href='{{@blog.url}}'> {{{@blog.title}}} </a>
+              <a title="{{@blog.title}}" href='/'> {{{@blog.title}}} </a>
           {{/if}}
         </h1>
 
@@ -38,10 +38,10 @@
         <nav class="Yayul_header__navigation">
           <ul class="Yayul_header__links">
             <li class="Yayul_header__item">
-              <a class="Yayul_header__link" href="{{@blog.url}}">Home</a>
+              <a class="Yayul_header__link" href="/">Home</a>
             </li>
             <li class="Yayul_header__item">
-              <a class="Yayul_header__link" href="{{@blog.url}}/about">About</a>
+              <a class="Yayul_header__link" href="/about">About</a>
             </li>
           </ul>
         </nav>
