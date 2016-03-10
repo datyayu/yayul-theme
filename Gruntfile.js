@@ -34,6 +34,9 @@ module.exports = function(grunt) {
           '../datyayu.xyz/content/themes/yayul/assets/js/vendor.js':  [
             './bower_components/modernizr/modernizr.js',
             './bower_components/prism/prism.js',
+            './bower_components/prism/components/prism-javascript.js',
+            './bower_components/prism/components/prism-markup.js',
+            './src/scripts/jsx-support.js'
           ],
         }
       }
