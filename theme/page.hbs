@@ -1,0 +1,20 @@
+{{!< default}}
+{{> "headers/post" }}
+
+
+<main class="Yayul_main" role="main" id="content">
+    {{#post}}
+        <article class="Yayul_post" role="article" itemscope itemtype="http://schema.org/Article">
+            <header class="Yayu_post__header">
+                <h1 class="Yayul_post__title" itemprop="headline">{{title}}</h1>
+            </header>
+
+            <div class="Yayul_post__content" itemprop="articleBody">
+                {{content}}
+            </div>
+        </article>
+    {{/post}}
+</main>
+
+
+{{> footer}}
