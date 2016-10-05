@@ -1,6 +1,6 @@
 {
-  "name": "ghostthemingpackage",
-  "version": "1.0",
+  "name": "Yayul-theme",
+  "version": "1.2",
   "dependencies": {
     "lesshat": "latest",
     "normalize-css": "latest",

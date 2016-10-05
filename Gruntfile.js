@@ -30,14 +30,14 @@ module.exports = function(grunt) {
             './bower_components/prism/prism.js',
           ],
 
-          /* THIS SHOULD BE DELETED BEFORE COMMITTING */
-          '../datyayu.xyz/content/themes/yayul/assets/js/vendor.js':  [
-            './bower_components/modernizr/modernizr.js',
-            './bower_components/prism/prism.js',
-            './bower_components/prism/components/prism-javascript.js',
-            './bower_components/prism/components/prism-markup.js',
-            './src/scripts/jsx-support.js'
-          ],
+          // /* THIS ONLY FOR DEV PURPOSES */
+          // '../datyayu.xyz/content/themes/yayul/assets/js/vendor.js':  [
+          //   './bower_components/modernizr/modernizr.js',
+          //   './bower_components/prism/prism.js',
+          //   './bower_components/prism/components/prism-javascript.js',
+          //   './bower_components/prism/components/prism-markup.js',
+          //   './src/scripts/jsx-support.js'
+          // ],
         }
       }
     },
@@ -71,12 +71,12 @@ module.exports = function(grunt) {
             './build/compiled_styles.css',
           ],
 
-          /* THIS SHOULD BE DELETED BEFORE COMMITTING */
-          '../datyayu.xyz/content/themes/yayul/assets/css/style.css':  [
-            './bower_components/normalize-css/normalize.css',
-            './bower_components/prism/themes/prism-okaidia.css',
-            './build/compiled_styles.css',
-          ],
+          // /* THIS ONLY FOR DEV PURPOSES */
+          // '../ghost/content/themes/yayul/assets/css/style.css':  [
+          //   './bower_components/normalize-css/normalize.css',
+          //   './bower_components/prism/themes/prism-okaidia.css',
+          //   './build/compiled_styles.css',
+          // ],
         }
       }
     },
